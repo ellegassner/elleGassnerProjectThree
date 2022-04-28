@@ -1,6 +1,10 @@
 // Module
-import { useEffect } from "react";
+import { useEffect, useState  } from "react";
+import React, { useRef } from "react";
 import { getDatabase, ref, onValue, get } from "firebase/database";
+
+// Components
+import DifficultyForm from "./Components/DifficultyForm";
 
 // Config
 import firebase from "./firebase";
@@ -9,21 +13,44 @@ import firebase from "./firebase";
 import "./App.css";
 
 
-function App() {
-  const database = getDatabase(firebase);
-  const dbRef = ref(database);
-  
-  get(dbRef).then((snapshot) => {
-    const data = snapshot.val();
-    console.log("data", data)
-  })
+const App = () => {
+  const [plants, setPlants] = useState([]);
+  const [userInput, setUserInput] = useState([]);
+  const scrollTo = useRef();
 
+  useEffect(() => {
+    const database = getDatabase(firebase);
+    const dbRef = ref(database);
+
+    onValue(dbRef, (response) => {
+      const convertedArray = [];
+      const data = response.val();
+      const rootData = data.plants;
+      
+      for (let key in rootData) {
+        convertedArray.push(rootData[key])
+      }
+      setPlants(convertedArray);
+
+      console.log(convertedArray);
+    })
+  }, [])
+
+  
 
   return (
     <div className="App">
-      <h1>Get Planted</h1>
-      
+      <div className="AppHomePage">
+        <h1>Get Planted</h1>
+        <h3>Life's better with a lil bit of green</h3>
+        <button onClick={() => scrollTo.current.scrollIntoView()}>Find Plants!</button>  
+      </div>
+      <div ref={scrollTo} className="AppUserPage">
+        <h2>Get Planted</h2>
+        <DifficultyForm />
+      </div>
     </div>
+
   );
 }
 
