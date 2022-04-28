@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
+
 const DisplayPlants = ({data}) => {
     return (
         <div>
+            <h2>
+                <Link to="/homepage">Get Planted</Link>
+            </h2>
             {
                 data.map((plants) => {
                     return (
