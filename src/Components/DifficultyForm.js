@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-const DifficultyForm = () => {
+const DifficultyForm = (props) => {
     const [userChoice, setUserChoice] = useState("placeholder");
-    // console.log("props", props)
 
-    const handleUserChoice = (event) => {
-        setUserChoice(event.target.value);
+    const handleUserChoice = (e) => {
+        setUserChoice(e.target.value);
     }
 
     return (
-        <form>
+        <form onSubmit={(e) => props.getPlants(e, userChoice)}>
             <select
                 name="difficulty" 
                 id="difficulty"

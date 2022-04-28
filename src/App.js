@@ -5,6 +5,7 @@ import { getDatabase, ref, onValue, get } from "firebase/database";
 
 // Components
 import DifficultyForm from "./Components/DifficultyForm";
+import DisplayPlants from "./Components/DisplayPlants";
 
 // Config
 import firebase from "./firebase";
@@ -31,11 +32,18 @@ const App = () => {
         convertedArray.push(rootData[key])
       }
       setAllPlants(convertedArray);
-      console.log(convertedArray);
     })
-  }, [])
+  }, []);
 
-  
+  const getPlants = (e, plantDifficulty) => {
+    e.preventDefault();
+    // console.log("getting plants", plantDifficulty);
+    const copyOfAllPlants = [...allPlants];
+    const plantsFiltered = copyOfAllPlants.filter((plant) => {
+      return plant.difficulty === plantDifficulty;
+    });
+    setPlantsFiltered(plantsFiltered);
+  }
 
   return (
     <div className="App">
@@ -46,17 +54,8 @@ const App = () => {
       </div>
       <div ref={scrollTo} className="AppUserPage">
         <h2>Get Planted</h2>
-        <DifficultyForm />
-
-        {
-          allPlants.map((plants) => {
-            return (
-              <div key={plants.id}>
-                <img src={plants.picture} alt={plants.altDescription} />
-              </div>
-            )
-          })
-        }
+        <DifficultyForm getPlants={getPlants}/>
+        <DisplayPlants data={plantsFiltered} />
       </div>
     </div>
 
