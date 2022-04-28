@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-const DifficultyForm = (props) => {
+const DifficultyForm = () => {
     const [userChoice, setUserChoice] = useState("placeholder");
+    // console.log("props", props)
 
     const handleUserChoice = (event) => {
-        console.log(event.target.value);
+        setUserChoice(event.target.value);
     }
 
     return (
@@ -20,7 +21,7 @@ const DifficultyForm = (props) => {
                 <option value="intermediate">intermediate</option>
                 <option value="expert">expert</option>
             </select>
-            <button>Show the Plants!</button>
+            <button type="submit">Show the Plants!</button>
         </form>
     )
 }

@@ -14,8 +14,8 @@ import "./App.css";
 
 
 const App = () => {
-  const [plants, setPlants] = useState([]);
-  const [userInput, setUserInput] = useState([]);
+  const [allPlants, setAllPlants] = useState([]);
+  const [plantsFiltered, setPlantsFiltered] = useState([]);
   const scrollTo = useRef();
 
   useEffect(() => {
@@ -30,8 +30,7 @@ const App = () => {
       for (let key in rootData) {
         convertedArray.push(rootData[key])
       }
-      setPlants(convertedArray);
-
+      setAllPlants(convertedArray);
       console.log(convertedArray);
     })
   }, [])
@@ -48,6 +47,16 @@ const App = () => {
       <div ref={scrollTo} className="AppUserPage">
         <h2>Get Planted</h2>
         <DifficultyForm />
+
+        {
+          allPlants.map((plants) => {
+            return (
+              <div key={plants.id}>
+                <img src={plants.picture} alt={plants.altDescription} />
+              </div>
+            )
+          })
+        }
       </div>
     </div>
 
