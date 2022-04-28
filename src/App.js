@@ -1,17 +1,17 @@
-// Module
+// Modules
 import { useEffect, useState  } from "react";
-import React, { useRef } from "react";
 import { getDatabase, ref, onValue, get } from "firebase/database";
 import { Link, Routes, Route } from "react-router-dom";
 
 // Components
-import FindPlantsPage from "./Components/DifficultyForm";
+import FindPlantsPage from "./Components/FindPlantsPage";
 import DisplayPlants from "./Components/DisplayPlants";
 import HomePage from "./Components/HomePage";
 import ErrorPage from "./Components/ErrorPage";
 
 // Config
 import firebase from "./firebase";
+import React from "react";
 
 // Styling
 import "./App.css";
