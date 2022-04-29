@@ -4,6 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 const FindPlantsPage = (props) => {
     const [userDifficultyChoice, setUserDifficultyChoice] = useState("placeholder");
     const [userSizeChoice, setUserSizeChoice] = useState("placeholder");
+    const [userSunChoice, setUserSunChoice] = useState("placeholder");
     const [redirect, setRedirect] = useState(false);
     const [data, setData] = useState();
 
@@ -15,9 +16,13 @@ const FindPlantsPage = (props) => {
         setUserSizeChoice(e.target.value);
     }
 
+    const handleUserSunChoice = (e) => {
+        setUserSunChoice(e.target.value);
+    }
+
 
     const handleSubmit = (e) => {
-        props.getPlants(e, userDifficultyChoice, userSizeChoice);
+        props.getPlants(e, userDifficultyChoice, userSizeChoice, userSunChoice);
 
         setRedirect(true);
         setData(e);
@@ -58,6 +63,19 @@ const FindPlantsPage = (props) => {
                             <option value="small">small</option>
                             <option value="medium">medium</option>
                             <option value="large">large</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <select
+                            name="sunlight"
+                            id="sunlight"
+                            onChange={handleUserSunChoice}
+                            value={userSunChoice}
+                        >
+                            <option value="placeholder" disabled>Sunlight | Choose One:</option>
+                            <option value="low">low</option>
+                            <option value="medium">medium</option>
+                            <option value="bright">bright</option>
                         </select>
                     </fieldset>
                     
