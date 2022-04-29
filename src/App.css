@@ -9,10 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 .App {
   text-align: center;
@@ -106,7 +106,9 @@ button:active {
   box-shadow: 3px 2px 22px 1px #2b4440;
 }
 
-a {
+a,
+.AppFindPlantsPage button {
+  font-family: 'Noto Serif', serif;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -124,6 +126,8 @@ a {
   background: none;
   color: white;
 }
+
+
 
 .AppDisplayPage a {
   font-family: 'Satisfy', cursive;
@@ -144,4 +148,23 @@ a {
   margin: 0 auto;
 }
 
+form {
+  margin-top: 60%;
+}
 
+select {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
+  background: white;
+  color: #2b4440;
+  border: none;
+  margin-bottom: 5%;
+  padding: 10px;
+}
+
+option {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
+  color: #2b4440;
+  text-align: center;
+}
