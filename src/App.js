@@ -20,6 +20,7 @@ import "./App.css";
 const App = () => {
   const [allPlants, setAllPlants] = useState([]);
   const [plantsFiltered, setPlantsFiltered] = useState([]);
+  const [plantSize, setPlantSize] = useState([]);
 
   useEffect(() => {
     const database = getDatabase(firebase);
@@ -37,16 +38,38 @@ const App = () => {
     })
   }, []);
 
-  const getPlants = (e, plantDifficulty) => {
+  const getPlants = (e, plantDifficulty, plantSize) => {
     e.preventDefault();
     const copyOfAllPlants = [...allPlants];
     const plantsFiltered = copyOfAllPlants.filter((plant) => {
       return plant.difficulty === plantDifficulty;
-      
     });
     setPlantsFiltered(plantsFiltered);
-    console.log("getting plants", plantsFiltered);
+    console.log("plants filtered", plantsFiltered);
+
+    const copyOfFilteredPlants = [...plantsFiltered];
+    console.log("copy", copyOfFilteredPlants)
+    const plantSizeFiltered = copyOfFilteredPlants.filter((plant) => {
+      return plant.size === plantSize;
+    });
+    console.log("plant size filtered", plantSizeFiltered);
   }
+
+
+  // const getPlantSizes = (e, plantSize) => {
+  //   e.preventDefault();
+  //   const copyOfFilteredPlants = [...plantsFiltered];
+  //   console.log("copy", copyOfFilteredPlants)
+  //   const plantSizeFiltered = copyOfFilteredPlants.filter((plant) => {
+  //     // return plant.size === plantSize;
+  //     // if (plant.size === true) {
+  //     //   return plant.size === plantSize;
+  //     // }
+  //     console.log("plant", plant.size === plantSize);
+  //   });
+  //   // setPlantSize(plantSizeFiltered);
+  //   console.log("plantsize filtered", plantSizeFiltered);
+  // }
 
   return (
     <div className="App">
