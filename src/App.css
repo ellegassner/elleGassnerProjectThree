@@ -152,6 +152,10 @@ form {
   margin-top: 60%;
 }
 
+fieldset {
+  border: none;
+}
+
 select {
   font-family: 'Noto Serif', serif;
   font-size: 1.5rem;
