@@ -20,24 +20,26 @@ const FindPlantsPage = (props) => {
         return <Navigate to={{pathname: "/displayplants", data: { data }}} />
 
     return (
-        <div className="AppUserPage">
-            <h2>
-                <Link to="/homepage">Get Planted</Link>
-            </h2>
-            <form onSubmit={handleSubmit}>
-                <select
-                    name="difficulty"
-                    id="difficulty"
-                    onChange={handleUserChoice}
-                    value={userChoice}
-                >
-                    <option value="placeholder" >Difficulty Level | Choose One:</option>
-                    <option value="beginner">beginner</option>
-                    <option value="intermediate">intermediate</option>
-                    <option value="expert">expert</option>
-                </select>
-                <button type="submit">Find Plants!</button>
-            </form>
+        <div className="AppFindPlantsPage">
+            <div className="wrapper">
+                <h2 className="logo">
+                    <Link to="/homepage">Get Planted</Link>
+                </h2>
+                <form onSubmit={handleSubmit}>
+                    <select
+                        name="difficulty"
+                        id="difficulty"
+                        onChange={handleUserChoice}
+                        value={userChoice}
+                    >
+                        <option value="placeholder" >Difficulty Level | Choose One:</option>
+                        <option value="beginner">beginner</option>
+                        <option value="intermediate">intermediate</option>
+                        <option value="expert">expert</option>
+                    </select>
+                    <button type="submit">Find Plants!</button>
+                </form>
+            </div>
         </div>
     )
 }
