@@ -19,7 +19,6 @@ const FindPlantsPage = (props) => {
     const handleSubmit = (e) => {
         props.getPlants(e, userDifficultyChoice, userSizeChoice);
 
-        // props.getPlantSizes(e, userSizeChoice);
         setRedirect(true);
         setData(e);
         console.log("user Diff", userDifficultyChoice);
