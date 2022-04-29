@@ -21,6 +21,7 @@ const App = () => {
   const [allPlants, setAllPlants] = useState([]);
   const [plantsFiltered, setPlantsFiltered] = useState([]);
   const [plantSizeFiltered, setPlantSizeFiltered] = useState([]);
+  const [plantSunFiltered, setPlantSunFiltered] = useState([]);
 
   useEffect(() => {
     const database = getDatabase(firebase);
@@ -38,7 +39,7 @@ const App = () => {
     })
   }, []);
 
-  const getPlants = (e, plantDifficulty, plantSize) => {
+  const getPlants = (e, plantDifficulty, plantSize, plantSun) => {
     e.preventDefault();
     const copyOfAllPlants = [...allPlants];
     const plantsFiltered = copyOfAllPlants.filter((plant) => {
@@ -47,6 +48,7 @@ const App = () => {
     setPlantsFiltered(plantsFiltered);
     console.log("plants filtered", plantsFiltered);
 
+
     const copyOfFilteredPlants = [...plantsFiltered];
     console.log("copy", copyOfFilteredPlants)
     const plantSizeFiltered = copyOfFilteredPlants.filter((plant) => {
@@ -54,6 +56,15 @@ const App = () => {
     });
     setPlantSizeFiltered(plantSizeFiltered);
     console.log("plant size filtered", plantSizeFiltered);
+
+
+    const copyOfPlantSizeFiltered = [...plantSizeFiltered];
+    console.log("copy sun", copyOfPlantSizeFiltered);
+    const plantSunFiltered = copyOfPlantSizeFiltered.filter((plant) => {
+      return plant.sunlightNeeds === plantSun;
+    });
+    setPlantSunFiltered(plantSunFiltered);
+    console.log("plant sun", plantSunFiltered);
   }
 
   return (
@@ -63,7 +74,7 @@ const App = () => {
       <Routes>
         <Route path="/homepage" element={ <HomePage /> } />
         <Route path="/findplantspage" element={ <FindPlantsPage getPlants={getPlants} /> } />
-        <Route path="/displayplants" element={ <DisplayPlants data={plantSizeFiltered} /> } />
+        <Route path="/displayplants" element={<DisplayPlants data={plantSunFiltered} /> } />
         <Route path="/*" element={ <ErrorPage /> } />
       </Routes>
 
