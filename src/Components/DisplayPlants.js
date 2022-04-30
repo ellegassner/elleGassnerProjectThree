@@ -5,7 +5,7 @@ const DisplayPlants = ({data}) => {
     return (
         <div className="AppDisplayPage wrapper">
             <h2 className="logo">
-                <Link to="/homepage">Get Planted</Link>
+                <Link to="/">Get Planted</Link>
             </h2>
             
             {
