@@ -21,6 +21,7 @@ body {
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .AppHomePage .wrapper,
@@ -41,14 +42,16 @@ img {
   height: 100vh;
   background-image: url(https://images.unsplash.com/photo-1493673272479-a20888bcee10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
   background-size: cover;
-  background-position: cover;
+  background-position: center;
+  margin: 0 auto;
 }
 
 h1 {
   font-family: 'Satisfy', cursive;
   font-size: 6rem;
   line-height: 6.25rem;
-  margin: 55% 0 5% 0;
+  margin: 0 0 5% 0;
+  padding-top: 55%;
 }
 
 h2 {
@@ -73,12 +76,22 @@ h4 {
   margin: 5px 0 3px 0;
 }
 
+h5 {
+  font-size: 1.5rem;
+  color: white;
+  background: #1b2b28;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 p {
   font-size: 1.25rem;
   margin-top: 3px;
   margin-bottom: 25%;
 }
 
+.btn,
 button {
   background: #ff5757;
   border: none;
@@ -86,13 +99,11 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
+  font-size: 2rem;
   color: white;
   transition: 0.4s all;
 }
 
-a:focus,
-a:hover,
-a:active,
 button:focus,
 button:hover,
 button:active {
@@ -101,33 +112,37 @@ button:active {
   color: #ff5757;
 }
 
+a:hover {
+  background: white;
+  color: #ff5757;
+}
+
+.btn:active,
 button:active {
   transform: scale(0.95);
   box-shadow: 3px 2px 22px 1px #2b4440;
 }
 
-a,
+
 .AppFindPlantsPage button {
   font-family: 'Noto Serif', serif;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
-  color: white;
 }
 
 .logo a {
   font-family: 'Satisfy', cursive;
   text-transform: none;
+  text-decoration: none;
+  color: white;
 }
 
 .logo a:focus,
 .logo a:hover,
 .logo a:active {
   background: none;
-  color: white;
 }
-
-
 
 .AppDisplayPage a {
   font-family: 'Satisfy', cursive;
@@ -149,11 +164,25 @@ a,
 }
 
 form {
-  margin-top: 60%;
+  margin-top: 10%;
 }
 
 fieldset {
   border: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+label {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 10px;
+
 }
 
 select {
@@ -162,8 +191,9 @@ select {
   background: white;
   color: #2b4440;
   border: none;
-  margin-bottom: 5%;
+  margin: 3px 0 8% 0;
   padding: 10px;
+  width: 80%;
 }
 
 option {
@@ -171,4 +201,88 @@ option {
   font-size: 1.5rem;
   color: #2b4440;
   text-align: center;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 8rem;
+    line-height: 9rem;
+    margin-bottom: 0;
+    padding-top: 40%;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin: 0 0 10% 0;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  h5 {
+    font-size: 2.25rem;
+  }
+
+  form {
+    margin-top: 5%;
+  }
+
+  select {
+    margin-bottom: 3%;
+  }
+
+  .AppDisplayPage img {
+    height: 300px;
+    width: 300px;
+  }
+
+  p {
+    font-size: 1.75rem;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  h1 {
+    padding-top: 30%;
+  }
+
+  h3 {
+    margin-bottom: 5%;
+  }
+
+  form {
+    margin-top: 25px;
+  }
+
+  label {
+    font-size: 2rem;
+    padding-bottom: 3px;
+  }
+
+  h5,
+  select {
+    width: 60%;
+  }
+
+  .AppDisplayPage img {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    padding-top: 25%;
+  }
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  h5,
+  select {
+    width: 50%;
+  }
 }

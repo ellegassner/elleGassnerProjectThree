@@ -1,7 +1,7 @@
 // Modules
 import { useEffect, useState  } from "react";
 import { getDatabase, ref, onValue, get } from "firebase/database";
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Components
 import FindPlantsPage from "./Components/FindPlantsPage";
@@ -69,10 +69,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Link to="/homepage"></Link>
-
+      
       <Routes>
-        <Route path="/homepage" element={ <HomePage /> } />
+        <Route path="/" element={ <HomePage /> } />
         <Route path="/findplantspage" element={ <FindPlantsPage getPlants={getPlants} /> } />
         <Route path="/displayplants" element={<DisplayPlants data={plantSunFiltered} /> } />
         <Route path="/*" element={ <ErrorPage /> } />
