@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+// import { Alert } from "react-alert";
 
 const FindPlantsPage = (props) => {
     const [userDifficultyChoice, setUserDifficultyChoice] = useState("placeholder");
@@ -24,13 +25,21 @@ const FindPlantsPage = (props) => {
 
 
     const handleSubmit = (e) => {
-        props.getPlants(e, userDifficultyChoice, userSizeChoice, userSunChoice);
+        if (
+            (userDifficultyChoice !== "placeholder") &&
+            (userSizeChoice !== "placeholder") &&
+            (userSunChoice !== "placeholder")) {
+            
+            props.getPlants(e, userDifficultyChoice, userSizeChoice, userSunChoice);
 
-        setRedirect(true);
-        setData(e);
-        console.log("user Diff", userDifficultyChoice);
-        console.log("user Size", userSizeChoice);
-        console.log("user Sun", userSunChoice);
+            setRedirect(true);
+            setData(e);
+            console.log("user Diff", userDifficultyChoice);
+            console.log("user Size", userSizeChoice);
+            console.log("user Sun", userSunChoice);
+        } else {
+            alert("Please select your options");
+        }
     }
     if (redirect)
         return <Navigate to={{pathname: "/displayplants", data: { data }}} />
@@ -51,7 +60,7 @@ const FindPlantsPage = (props) => {
                             onChange={handleUserDifficultyChoice}
                             value={userDifficultyChoice}
                         >
-                            <option value="pick" disabled>pick one</option>
+                            <option value="placeholder" disabled>pick one</option>
                             <option value="beginner">beginner</option>
                             <option value="intermediate">intermediate</option>
                             <option value="expert">expert</option>
@@ -65,7 +74,7 @@ const FindPlantsPage = (props) => {
                             onChange={handleUserSizeChoice}
                             value={userSizeChoice}
                         >
-                            <option value="pick" disabled>pick one</option>
+                            <option value="placeholder" disabled>pick one</option>
                             <option value="small">small</option>
                             <option value="medium">medium</option>
                             <option value="large">large</option>
@@ -79,7 +88,7 @@ const FindPlantsPage = (props) => {
                             onChange={handleUserSunChoice}
                             value={userSunChoice}
                         >
-                            <option value="pick" disabled>pick one</option>
+                            <option value="placeholder" disabled>pick one</option>
                             <option value="low">low</option>
                             <option value="medium">medium</option>
                             <option value="bright">bright</option>
