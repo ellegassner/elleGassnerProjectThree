@@ -17,13 +17,16 @@ body {
   width: 80%;
   margin: 0 auto;
   height: 100vh;
+  max-width: 900px;
 }
 
 .AppHomePage .wrapper,
-.AppFindPlantPage .wrapper {
+.AppFindPlantPage .wrapper,
+.AppPlantInfo .wrapper {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  height: 100vh;
 }
 
 img {
@@ -80,6 +83,12 @@ h5 {
   margin: 0 auto;
 }
 
+h6 {
+  font-size: 1.5rem;
+  margin: 0 auto;
+  font-style: italic;
+}
+
 p {
   font-size: 1.25rem;
   margin: 0 0 10px 0;
@@ -93,8 +102,9 @@ p {
 
 .footer a {
   flex-basis: flex-end;
-  margin: 10% auto;
+  margin: 3% auto;
   color: white;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
@@ -102,6 +112,11 @@ p {
   background: none;
 }
 
+.AppHomePage .footer a {
+  margin-top: 40%;
+}
+
+.AppPlantInfo .footer a,
 .AppDisplayPage .footer a {
   color: #2b4440;
 }
@@ -111,7 +126,7 @@ p {
 button {
   background: #ff5757;
   border: none;
-  padding: 15px;
+  padding: 10px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -160,11 +175,15 @@ button:active {
   background: none;
 }
 
+.AppPlantInfo h2 a,
 .AppDisplayPage h2 a {
   font-family: 'Satisfy', cursive;
   color: #2b4440;
 }
 
+.AppPlantInfo h2 a:focus,
+.AppPlantInfo h2 a:hover,
+.AppPlantInfo h2 a:active,
 .AppDisplayPage h2 a:focus,
 .AppDisplayPage h2 a:hover,
 .AppDisplayPage h2 a:active {
@@ -172,11 +191,22 @@ button:active {
   color: #2b4440;
 }
 
+.AppDisplayPage h4 a {
+  color: #2b4440;
+}
+
+.AppDisplayPage h4 a:focus,
+.AppDisplayPage h4 a:hover,
+.AppDisplayPage h4 a:active {
+  color: #ff5757;
+}
+
+
 .AppDisplayPage p {
   font-family: 'Noto Serif', serif;
 }
 
-
+.AppPlantInfo img,
 .AppDisplayPage img {
   height: 200px;
   width: 200px;
@@ -188,6 +218,10 @@ button:active {
   margin-bottom: 10%;
 }
 
+.AppPlantInfo .dynamicInfo {
+  margin-bottom: 25px;
+}
+
 form {
   margin-top: 10%;
 }
@@ -196,7 +230,7 @@ fieldset {
   border: none;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
 }
@@ -259,8 +293,8 @@ option {
   }
 
   .AppDisplayPage img {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
   }
 
   p {
@@ -272,6 +306,10 @@ option {
 @media (min-width: 900px) {
   h1 {
     padding-top: 30%;
+  }
+
+  h2 {
+    margin-bottom: 25px;
   }
 
   h3 {
@@ -291,25 +329,40 @@ option {
   select {
     width: 60%;
   }
-
-  .AppDisplayPage img {
-    height: 400px;
-    width: 400px;
-  }
 }
 
 @media (min-width: 1200px) {
   h1 {
-    padding-top: 25%;
+    padding-top: 30%;
   }
 
   h2 {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+  }
+
+  .AppFindPlantsPage .footer a,
+  .AppHomePage .footer a {
+    font-size: 1.5rem;
+    margin-top: 15%;
   }
 
   h5,
   select {
     width: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .AppFindPlantsPage .footer a,
+  .AppHomePage .footer a {
+    font-size: 2rem;
+    margin-top: 15%;
+  }
+}
+
+@media (min-width: 1550px) {
+  .AppFindPlantsPage .footer a {
+    margin-top: 5%;
   }
 }
 
