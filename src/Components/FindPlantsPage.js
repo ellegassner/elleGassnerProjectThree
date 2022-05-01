@@ -12,6 +12,7 @@ const FindPlantsPage = (props) => {
 
 
     const handleUserDifficultyChoice = (e) => {
+        console.log("event", e.target.value == "any");
         setUserDifficultyChoice(e.target.value);
     }
 
@@ -61,6 +62,7 @@ const FindPlantsPage = (props) => {
                             value={userDifficultyChoice}
                         >
                             <option value="placeholder" disabled>pick one</option>
+                            <option value="any">any</option>
                             <option value="beginner">beginner</option>
                             <option value="intermediate">intermediate</option>
                             <option value="expert">expert</option>
@@ -96,6 +98,7 @@ const FindPlantsPage = (props) => {
                     </fieldset>
                     <button type="submit">Find Plants!</button>
                 </form>
+                <p className="footer"><a href="https://junocollege.com/">Created by Elle Gassner at Juno College of Technology</a></p>
             </div>
         </div>
     )

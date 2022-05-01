@@ -9,11 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 .App {
   text-align: center;
 }
@@ -87,15 +82,36 @@ h5 {
 
 p {
   font-size: 1.25rem;
-  margin-top: 3px;
-  margin-bottom: 25%;
+  margin: 0 0 10px 0;
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 25px;
+}
+
+.footer a {
+  flex-basis: flex-end;
+  margin: 10% auto;
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  background: none;
+}
+
+.AppDisplayPage .footer a {
+  color: #2b4440;
+}
+
 
 .btn,
 button {
   background: #ff5757;
   border: none;
-  padding: 10px;
+  padding: 15px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -144,23 +160,32 @@ button:active {
   background: none;
 }
 
-.AppDisplayPage a {
+.AppDisplayPage h2 a {
   font-family: 'Satisfy', cursive;
   color: #2b4440;
 }
 
-.AppDisplayPage a:focus,
-.AppDisplayPage a:hover,
-.AppDisplayPage a:active {
+.AppDisplayPage h2 a:focus,
+.AppDisplayPage h2 a:hover,
+.AppDisplayPage h2 a:active {
   background: none;
   color: #2b4440;
 }
+
+.AppDisplayPage p {
+  font-family: 'Noto Serif', serif;
+}
+
 
 .AppDisplayPage img {
   height: 200px;
   width: 200px;
   object-fit: cover;
   margin: 0 auto;
+}
+
+.dynamicInfo {
+  margin-bottom: 10%;
 }
 
 form {
@@ -171,7 +196,7 @@ fieldset {
   border: none;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   align-items: center;
 }
@@ -182,7 +207,7 @@ label {
   font-weight: 700;
   text-transform: uppercase;
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
 }
 

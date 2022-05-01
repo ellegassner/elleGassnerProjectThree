@@ -41,7 +41,9 @@ const App = () => {
 
   const getPlants = (e, plantDifficulty, plantSize, plantSun) => {
     e.preventDefault();
-    
+
+    console.log("testing", plantDifficulty)
+
     const copyOfAllPlants = [...allPlants];
     const plantsFiltered = copyOfAllPlants.filter((plant) => {
       return plant.difficulty === plantDifficulty;
@@ -77,7 +79,8 @@ const App = () => {
         <Route path="/displayplants" element={<DisplayPlants data={plantSunFiltered} /> } />
         <Route path="/*" element={ <ErrorPage /> } />
       </Routes>
-
+      
+      
     </div>
 
   );

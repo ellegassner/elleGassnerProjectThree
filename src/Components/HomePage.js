@@ -9,6 +9,7 @@ const HomePage = () => {
                 <p>
                     <Link to="/findplantspage" className="btn">Find Plants!</Link>
                 </p> 
+                <p className="footer"><a href="https://junocollege.com/">Created by Elle Gassner at Juno College of Technology</a></p>
             </div>
         </div>
     )
