@@ -12,13 +12,18 @@ const PlantInfo = ({data}) => {
             data.map((plants) => {
                 return (
                     <div className="dynamicInfo" key={plants.id}>
-                        <img
-                            src={plants.picture}
-                            alt={plants.altDescription}
-                        />
-                        <h4>{plants.commonName}</h4>
-                        <h6>Scientific Name | {plants.scientificName}</h6>
+                        <div className="imgContainer">
+                            <img
+                                src={plants.picture}
+                                alt={plants.altDescription}
+                            />
+                            
+                        </div>
+                        
+                        
                         <div className="plantSmallInfo">
+                            <h4>{plants.commonName}</h4>
+                            <h6>Scientific Name | {plants.scientificName}</h6>
                             <p>Difficulty Level | {plants.difficulty}</p>
                             <p>Size | {plants.size}</p>
                             <p>Sunlight Needed | {plants.sunlightNeeds}</p>
