@@ -41,6 +41,7 @@ const App = () => {
 
   const getPlants = (e, plantDifficulty, plantSize, plantSun) => {
     e.preventDefault();
+    
     const copyOfAllPlants = [...allPlants];
     const plantsFiltered = copyOfAllPlants.filter((plant) => {
       return plant.difficulty === plantDifficulty;
