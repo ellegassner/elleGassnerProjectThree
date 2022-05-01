@@ -12,11 +12,14 @@ const DisplayPlants = ({data}) => {
                 data.map((plants) => {
                     return (
                         <div className="dynamicInfo" key={plants.id}>
+                            
                             <img 
                                 src={plants.picture} 
                                 alt={plants.altDescription}
                             />
-                            <h4>{plants.commonName}</h4>
+                            <h4>
+                                <Link to="/plantinfo">{plants.commonName}</Link>
+                            </h4>
                             <p>Difficulty Level | {plants.difficulty}</p>
                             <p>Size | {plants.size}</p>
                             <p>Sunlight Needed | {plants.sunlightNeeds}</p>

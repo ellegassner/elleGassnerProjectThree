@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 // Components
 import FindPlantsPage from "./Components/FindPlantsPage";
 import DisplayPlants from "./Components/DisplayPlants";
+import PlantInfo from "./Components/PlantInfo";
 import HomePage from "./Components/HomePage";
 import ErrorPage from "./Components/ErrorPage";
 
@@ -77,6 +78,7 @@ const App = () => {
         <Route path="/" element={ <HomePage /> } />
         <Route path="/findplantspage" element={ <FindPlantsPage getPlants={getPlants} /> } />
         <Route path="/displayplants" element={<DisplayPlants data={plantSunFiltered} /> } />
+        <Route path="/plantinfo" element={<PlantInfo data={plantSunFiltered} />} />
         <Route path="/*" element={ <ErrorPage /> } />
       </Routes>
       

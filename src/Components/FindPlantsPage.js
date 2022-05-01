@@ -62,7 +62,6 @@ const FindPlantsPage = (props) => {
                             value={userDifficultyChoice}
                         >
                             <option value="placeholder" disabled>pick one</option>
-                            <option value="any">any</option>
                             <option value="beginner">beginner</option>
                             <option value="intermediate">intermediate</option>
                             <option value="expert">expert</option>
