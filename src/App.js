@@ -17,6 +17,7 @@ import React from "react";
 // Styling
 import "./App.css";
 
+
 const App = () => {
   const [allPlants, setAllPlants] = useState([]);
   const [plantsFiltered, setPlantsFiltered] = useState([]);
