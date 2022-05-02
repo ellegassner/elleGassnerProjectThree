@@ -1,6 +1,6 @@
 // Modules
 import { useEffect, useState  } from "react";
-import { getDatabase, ref, onValue, get } from "firebase/database";
+import { getDatabase, ref, onValue } from "firebase/database";
 import { Routes, Route } from "react-router-dom";
 
 // Components
