@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-// import { Alert } from "react-alert";
 
 const FindPlantsPage = (props) => {
     const [userDifficultyChoice, setUserDifficultyChoice] = useState("placeholder");
@@ -9,10 +8,7 @@ const FindPlantsPage = (props) => {
     const [redirect, setRedirect] = useState(false);
     const [data, setData] = useState();
 
-
-
     const handleUserDifficultyChoice = (e) => {
-        console.log("event", e.target.value == "any");
         setUserDifficultyChoice(e.target.value);
     }
 
@@ -35,9 +31,6 @@ const FindPlantsPage = (props) => {
 
             setRedirect(true);
             setData(e);
-            console.log("user Diff", userDifficultyChoice);
-            console.log("user Size", userSizeChoice);
-            console.log("user Sun", userSunChoice);
         } else {
             alert("Please select your options");
         }

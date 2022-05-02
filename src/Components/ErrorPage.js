@@ -5,7 +5,7 @@ const ErrorPage = () => {
         <div>
             <h2>Oops! There's nothing here!</h2>
             <h3>
-                <Link to="/"></Link>
+                <Link to="/">Click here to go back to the Home Page</Link>
             </h3>
         </div>
     )

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const DisplayPlants = ({data}) => {
-    console.log(data);
     return (
         <div className="AppDisplayPage wrapper">
             <h2 className="logo">
