@@ -121,7 +121,6 @@ p {
   color: #2b4440;
 }
 
-
 .btn,
 button {
   background: #ff5757;
@@ -153,7 +152,6 @@ button:active {
   transform: scale(0.95);
   box-shadow: 3px 2px 22px 1px #2b4440;
 }
-
 
 .AppFindPlantsPage button {
   font-family: 'Noto Serif', serif;
@@ -201,7 +199,6 @@ button:active {
   color: #ff5757;
 }
 
-
 .AppDisplayPage p {
   font-family: 'Noto Serif', serif;
 }
@@ -242,7 +239,6 @@ label {
   text-transform: uppercase;
   color: white;
   padding-bottom: 5px;
-
 }
 
 select {

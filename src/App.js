@@ -43,32 +43,25 @@ const App = () => {
   const getPlants = (e, plantDifficulty, plantSize, plantSun) => {
     e.preventDefault();
 
-    console.log("testing", plantDifficulty)
-
     const copyOfAllPlants = [...allPlants];
     const plantsFiltered = copyOfAllPlants.filter((plant) => {
       return plant.difficulty === plantDifficulty;
     });
     setPlantsFiltered(plantsFiltered);
-    console.log("plants filtered", plantsFiltered);
 
 
     const copyOfFilteredPlants = [...plantsFiltered];
-    console.log("copy", copyOfFilteredPlants)
     const plantSizeFiltered = copyOfFilteredPlants.filter((plant) => {
       return plant.size === plantSize;
     });
     setPlantSizeFiltered(plantSizeFiltered);
-    console.log("plant size filtered", plantSizeFiltered);
 
 
     const copyOfPlantSizeFiltered = [...plantSizeFiltered];
-    console.log("copy sun", copyOfPlantSizeFiltered);
     const plantSunFiltered = copyOfPlantSizeFiltered.filter((plant) => {
       return plant.sunlightNeeds === plantSun;
     });
     setPlantSunFiltered(plantSunFiltered);
-    console.log("plant sun", plantSunFiltered);
   }
 
   return (
@@ -82,9 +75,7 @@ const App = () => {
         <Route path="/*" element={ <ErrorPage /> } />
       </Routes>
       
-      
     </div>
-
   );
 }
 

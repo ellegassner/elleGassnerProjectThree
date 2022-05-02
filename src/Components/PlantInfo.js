@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 
 const PlantInfo = ({data}) => {
-    console.log({data});
     return (
         <div className="AppPlantInfo wrapper">
             <h2 className="logo">
@@ -17,9 +16,7 @@ const PlantInfo = ({data}) => {
                                 src={plants.picture}
                                 alt={plants.altDescription}
                             />
-                            
                         </div>
-                        
                         
                         <div className="plantSmallInfo">
                             <h4>{plants.commonName}</h4>
@@ -29,8 +26,6 @@ const PlantInfo = ({data}) => {
                             <p>Sunlight Needed | {plants.sunlightNeeds}</p>
                             <p>{plants.plantCare}</p>
                         </div>
-                        
-                        
                     </div>
                 )
             })
