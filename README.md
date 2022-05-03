@@ -7,7 +7,7 @@ Firebase "mini API", created by myself, with data compiled from mulitple sources
 Created and Developed by Elle Gassner at Juno College of Technology
 
 
-### Photographer credit | photos sourced from Unsplash
+#### 📷 Photographer credit | photos sourced from Unsplash
   Severin Candrian
   Sarah Bronske
   Vipin Rajbher 
