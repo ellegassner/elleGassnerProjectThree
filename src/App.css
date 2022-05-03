@@ -297,6 +297,11 @@ option {
     font-size: 1.75rem;
     margin-top: 10px;
   }
+
+  .AppHomePage .footer a,
+  .AppFindPlantsPage .footer a {
+    margin-top: 25px;
+  }
 }
 
 @media (min-width: 850px) {
@@ -359,10 +364,14 @@ option {
     margin-bottom: 50px;
   }
 
-  .AppFindPlantsPage .footer a,
   .AppHomePage .footer a {
     font-size: 1.5rem;
     margin-top: 10%;
+  }
+
+  .AppFindPlantsPage .footer a {
+    font-size: 1.5rem;
+    margin-top: 10px;
   }
 
   h5,
