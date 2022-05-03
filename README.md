@@ -8,7 +8,7 @@ Created and Developed by Elle Gassner at Juno College of Technology
 
 
 #### 📷 Photographer credit | photos sourced from Unsplash
-<br />  
+ 
   Severin Candrian
 <br />  
   Sarah Bronske
@@ -26,5 +26,6 @@ Created and Developed by Elle Gassner at Juno College of Technology
   Gabriel
 <br />
   Z S 
+<br />  
   
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
