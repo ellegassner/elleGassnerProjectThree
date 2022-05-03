@@ -374,6 +374,10 @@ option {
     margin-top: 10px;
   }
 
+  .AppDisplayPage .dynamicInfo {
+    margin-bottom: 5%;
+  }
+
   h5,
   select {
     width: 50%;
