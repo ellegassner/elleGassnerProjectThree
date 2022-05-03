@@ -8,17 +8,23 @@ Created and Developed by Elle Gassner at Juno College of Technology
 
 
 #### 📷 Photographer credit | photos sourced from Unsplash
-<br />
+
   Severin Candrian
 <br />
   Sarah Bronske
-  
+<br />  
   Vipin Rajbher 
-  Jennifer Burk 
-  Chris Lee 
+<br />
+  Jennifer Burk
+<br />
+  Chris Lee
+<br />
   Lauren Mancke 
+<br />
   Susan Wilkinson 
-  Gabriel 
+<br />
+  Gabriel
+<br />
   Z S 
   
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
