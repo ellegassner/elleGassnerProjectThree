@@ -26,7 +26,7 @@ const FindPlantsPage = (props) => {
             (userDifficultyChoice !== "placeholder") &&
             (userSizeChoice !== "placeholder") &&
             (userSunChoice !== "placeholder")) {
-            
+
             props.getPlants(e, userDifficultyChoice, userSizeChoice, userSunChoice);
 
             setRedirect(true);
