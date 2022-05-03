@@ -8,7 +8,6 @@ Created and Developed by Elle Gassner at Juno College of Technology
 
 
 #### 📷 Photographer credit | photos sourced from Unsplash
-
 Severin Candrian
 <br /> 
 Sarah Bronske
