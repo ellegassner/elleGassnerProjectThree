@@ -15,7 +15,7 @@ import firebase from "./firebase";
 import React from "react";
 
 // Styling
-import "./App.css";
+import "./index.css";
 
 
 const App = () => {
